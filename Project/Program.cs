@@ -1,5 +1,14 @@
 ﻿using static System.Console;
 
+WriteLine("Введите строки массива через запятую: ");
+string[] elements = GetArray();
+WriteLine("Начальный массив: ");
+PrintArray(elements);
+WriteLine();
+WriteLine("Массив из элементов меньше трех символов: ");
+string[] shortElements = CheckElements(elements);
+PrintArray(shortElements);
+
 string[] GetArray()
 {
     string[] result = ReadLine()!.Split(",", StringSplitOptions.RemoveEmptyEntries);
